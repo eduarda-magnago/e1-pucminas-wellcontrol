@@ -1,0 +1,122 @@
+var url_instancia = window.location.protocol.concat(
+    "//",
+    window.location.hostname
+);
+
+if (window.location.pathname.search(/\/courses\/\d/) == 0) {
+
+    //$("#section-tabs > li > a.conferences").remove();
+
+    var link_home = $("a.home");
+    var link_msteams = $('<li class="section"><a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=teams&type=meetup-join&enableMobilePage=true&suppressPrompt=true&tenantId=14cbd5a7-ec94-46ba-b314-cc0fc972a161" class="puv_msteams" tabindex="0" target="_blank">Teams</a></li>');
+    link_home.parent().after(link_msteams);
+
+    var course_id = ENV.COURSE_ID;
+    var course_account_id = "";
+    var course_blueprint = "";
+    var course_name = "";
+    var course_sis_course_id = "";
+    var course_parent_account_id = "";
+
+    if (typeof course_id == "undefined") {
+        var cas = ENV.context_asset_string;
+        course_id = cas.substring(cas.indexOf("_") + 1, cas.length);
+    }
+
+    $.ajax({
+        async: false,
+        accept: "application/json+canvas-string-ids",
+        url: url_instancia + "/api/v1/courses/" + course_id,
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            course_account_id = data.account_id;
+            course_blueprint = data.blueprint;
+            course_name = data.name;
+            course_parent_account_id = data.account_id;
+            if (data.hasOwnProperty("sis_course_id")) {
+                if (data.sis_course_id != null) {
+                    course_sis_course_id = data.sis_course_id.toLowerCase();
+                }
+            }
+        }
+    });
+
+    var user_id = ENV.current_user_id;
+    var user_sis_user_id = "";
+    var user_name = "";
+    var user_login_id = "";
+    $.ajax({
+        async: false,
+        accept: "application/json+canvas-string-ids",
+        url: url_instancia + "/api/v1/courses/" + course_id + "/users/" + user_id,
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            user_sis_user_id = data.sis_user_id;
+            user_name = data.name;
+            user_login_id = data.login_id;
+        }
+    });
+
+    /*Verificar role do usuário*/
+    var user_role = "";
+    $.ajax({
+        async: false,
+        accept: "application/json+canvas-string-ids",
+        url: url_instancia + "/api/v1/courses/" + course_id + "/enrollments?user_id=self",
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            if (data.length > 0) {
+                user_role = data[0].role;
+            }
+        }
+    });
+
+    if (
+        (user_sis_user_id == "" && user_login_id == "") ||
+        (typeof user_sis_user_id == "undefined" &&
+            typeof user_login_id == "undefined")
+    ) {
+        $.ajax({
+            async: false,
+            accept: "application/json+canvas-string-ids",
+            url: url_instancia + "/api/v1/users/" + user_id + "/profile/",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                user_login_id = data.login_id;
+            }
+        });
+
+        if (user_login_id != "" && user_login_id.search("@") != -1) {
+            var login_id_split = user_login_id.split("@");
+            user_login_id = login_id_split[0];
+        }
+        user_sis_user_id = user_login_id;
+    }
+
+    var link_cpa = $('<li class="section"><a href="https://conteudo.virtual.pucminas.br/canvas/avaliacao_cpa_2018/index.php?user_sis_user_id=' + user_sis_user_id + '&course_sis_course_id=' + course_sis_course_id + '" title="Avaliação CPA" class="" tabindex="0" target="_blank">Avaliação CPA</a></li>');
+    var link_puc_carreiras = $(
+        '<li class="section link_puc_carreiras"><a href="https://carreiras.pucminas.br/" title="PUC Carreiras" class="" tabindex="0" target="_blank">PUC Carreiras</a></li>'
+    );
+
+
+    if (
+        $.inArray("student", ENV.current_user_roles) != -1 &&
+        course_sis_course_id.split("_")[0] != "apr" &&
+        course_sis_course_id.split("_")[0] != "puv" &&
+        course_sis_course_id.split("_")[0] != "cd" &&
+        ! course_sis_course_id.toLowerCase().includes("pordentro") &&
+        ! course_sis_course_id.toLowerCase().includes("espaco")
+    ) {
+        //Adiciona links alunos
+        $('#section-tabs').append(link_cpa);
+        $("#section-tabs").append(link_puc_carreiras);
+    }
+}
