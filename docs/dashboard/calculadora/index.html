@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WellControl</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/calculadora_insulina.css"> <!-- Link to external stylesheet -->
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <!--    Código para a menu lateral começa aqui-->
+    <div id="header"
+         hx-get="../../partials/header.html"
+         hx-trigger="load"
+         hx-swap="outerHTML">
+      <!-- Placeholder content while loading -->
+      <p>Loading header...</p>
+    </div>
+    <!--    Menu laterial termina aqui -->
+
+    <!--    Código para as páginas começa aqui-->
+    <main>
+      <div id="navigation"
+           hx-get="../../partials/navigation.html"
+           hx-trigger="load"
+           hx-swap="outerHTML">
+        <!-- Placeholder content while loading -->
+        <p>Loading navigation...</p>
+      </div>
+      <section>
+        <h2>Calculadora</h2>
+        <div class="row d-flex justify-content-center">
+        <div class="col-lg-12">
+        <div class="container">
+        <div class="row">
+
+        <!-- Calculadora-->
+        <div class="col-xs-12 col-md-6 ml-auto">
+          <div class="card">
+            <div class="card-body">
+              <div class="header">
+                <h3>Passo 1 - Carboidratos</h3>
+              </div>
+              <p>Responda os itens do “Passo 1” e “Passo 2” utilizando a calculadora abaixo</p>
+
+              <div class="step">
+                <label for="carboidratos">Quantos gramas de carboidratos havia em sua refeição?</label>
+                <input type="number" id="carboidratos" name="carboidratos" placeholder="(g)">
+
+                <label for="proporcao">Proporção de carboidratos. Geralmente são 10-15 gramas: </label>
+                <input type="number" id="proporcao" name="proporcao" placeholder="(g/unidade)">
+              </div>
+            </div>
+          </div>
+          <br><br>
+          
+          <div class="card">
+            <div class="card-body">
+              <div class="header">
+                <h3>Passo 2 - Correção de açúcar elevado no sangue</h3>
+              </div>
+              <div class="step">
+                <label for="glicemia_atual">Glicemia atual:</label>
+                <input type="number" id="glicemia_atual" name="glicemia_atual" placeholder="(mg/dl)">
+
+                <label for="alvo_glicemia">Alvo de glicemia:</label>
+                <input type="number" id="alvo_glicemia" name="alvo_glicemia" placeholder="(mg/dl)">
+
+                <label for="sensibilidade">Fator de sensibilidade à insulina:</label>
+                <input type="number" id="sensibilidade" name="sensibilidade" placeholder="(mg/dl)">
+              </div>
+            </div>
+
+  
+          </div>
+          <br><br>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="resultado-container">
+                <div class="header">
+                  <h3>Resultado do cálculo de Insulina</h3>
+                </div>
+
+                <div class="resultado">
+                  <label for="dose_correção" readonly>Dose de insulina para corrigir glicemia:</label>
+                  <input type="text" id="dose_correção" name="dose_correção" placeholder="(unidade)" readonly>
+                  <button class="salvar">Salvar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+
+          
+        <!-- Coluna do Histórico de Medições -->
+        <div class="historico">
+        <div class="col-xs-12 col-md-6">
+          <div class="card p-4">
+            <div class="card-body">
+              <div class="header">
+                <h3>Histórico de Medições</h3>
+              </div>
+              <p>
+                Monitore suas medições anteriores de glicemia!
+              </p>
+              <a href="../../dashboard/historico_medicoes/historico_medicoes.html" class="btn btn-primary">Acessar Histórico de Medições</a>
+            </div>
+          </div>
+        </div>
+        </div><br><br>
+          
+        </div>
+          </div>
+          </div>
+          </div>
+      </section>
+    </main>
+    
+    <!--    Página termina aqui -->
+
+  </div>
+  <div id="footer"
+       hx-get="../../partials/footer.html"
+       hx-trigger="load"
+       hx-swap="outerHTML">
+    <!-- Placeholder content while loading -->
+    <p>Loading footer...</p>
+  </div>
+  <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+  <script src="../../js/calculadora_insulina.js"></script>
+  <script src="../../js/salvar_medicao.js"></script>
+</body>
+</html>

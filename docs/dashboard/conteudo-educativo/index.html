@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WellControl</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../../styles/styles.css">
+
+  <link rel="stylesheet" href="../../styles/conteudo-educativo.css">
+</head>
+<body>
+  <div class="content-wrapper">
+    <!--    Código para a menu lateral começa aqui-->
+    <div id="header"
+         hx-get="../../partials/header.html"
+         hx-trigger="load"
+         hx-swap="outerHTML">
+      <!-- Placeholder content while loading -->
+      
+    </div>
+    <!--    Menu laterial termina aqui -->
+
+    <!--    Código para as páginas começa aqui-->
+    <main>
+      <div id="navigation"
+           hx-get="../../partials/navigation.html"
+           hx-trigger="load"
+           hx-swap="outerHTML">
+        <!-- Placeholder content while loading -->
+        
+      </div>
+
+      <div class="container my-5">
+        <h2 class="text-center mb-4">Conteúdo Educativo</h2>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="/images/controle-glicemia.png" class="card-img-top" alt="Imagem 1">
+              <div class="card-body">
+                <h5 class="card-title">Como controlar a glicemia?</h5>
+                <p class="card-text">O controle da glicemia pode ser alcançado através de uma combinação de dieta, exercício e, em alguns casos, medicação.</p>
+                <a href="/dashboard/conteudo-educativo/artigo1.html" class="btn btn-primary btn-block">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="/images/nutricao.png" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                <h5 class="card-title">Nutrição e Alimentação</h5>
+                <p class="card-text">Uma alimentação saudável é um padrão de consumo de alimentos que fornece os nutrientes necessários para o bom funcionamento do organismo</p>
+                <a href="/dashboard/conteudo-educativo/artigo2.html" class="btn btn-primary btn-block">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="/images/atividade-fisica.png" class="card-img-top" alt="Imagem 3">
+              <div class="card-body">
+                <h5 class="card-title">Exercício e Atividade Física</h5>
+                <p class="card-text">A importância das atividades físicas vai além da perda de peso, estando relacionada com a prevenção de doenças, como a hipertensão e o diabetes.</p>
+                <a href="/dashboard/conteudo-educativo/artigo3.html" class="btn btn-primary btn-block">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="/images/alongamento.png" class="card-img-top" alt="Imagem 4">
+              <div class="card-body">
+                <h5 class="card-title">Melhore seu Alongamento</h5>
+                <p class="card-text">Além de melhorar a flexibilidade e evitar lesões, o alongamento pode ser uma atividade física prazerosa e relaxante e ainda diminuir dores musculares</p>
+                <a href="/dashboard/conteudo-educativo/artigo4.html" class="btn btn-primary btn-block">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="/images/yoga.png" class="card-img-top" alt="Imagem 5">
+              <div class="card-body">
+                <h5 class="card-title">Yoga e Saúde</h5>
+                <p class="card-text">A prática do yoga tem como base a promoção do relaxamento, o foco na flexibilidade, no equilíbrio e promove a saúde mental.</p>
+                <a href="/dashboard/conteudo-educativo/artigo5.html" class="btn btn-primary btn-block">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="/images/algas.png" class="card-img-top" alt="Imagem 6">
+              <div class="card-body">
+                <h5 class="card-title">Beneficio das Algas</h5>
+                <p class="card-text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                <a href="/dashboard/conteudo-educativo/artigo6.html" class="btn btn-primary btn-block">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+    <div id="footer"
+         hx-get="../../partials/footer.html"
+         hx-trigger="load"
+         hx-swap="outerHTML">
+      <!-- Placeholder content while loading -->
+      <p>Loading footer...</p>
+    </div>
+  <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+</body>
+</html>

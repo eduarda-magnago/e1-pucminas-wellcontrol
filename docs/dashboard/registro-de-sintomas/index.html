@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WellControl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" 
+          rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/monitoramento-nutricional.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div id="header" 
+             hx-get="../../partials/header.html" 
+             hx-trigger="load" 
+             hx-swap="outerHTML">
+            <!-- Placeholder content while loading -->
+            <p>Loading header...</p>
+        </div>
+
+        <main>
+            <div id="navigation" 
+                 hx-get="../../partials/navigation.html" 
+                 hx-trigger="load" 
+                 hx-swap="outerHTML">
+                <!-- Placeholder content while loading -->
+                <p>Loading navigation...</p>
+            </div>
+
+            <h2>Registro de Sintomas</h2><br>
+            <div class="row d-flex justify-content-center">
+                <!-- Adicionar novo Sintoma -->
+                <div class="col-lg-6">
+                    <div class="card p-4">
+                        <h4>Adicionar novo Sintoma</h4>
+                        <select id="sintoma" name="sintoma" class="form-control mb-3">
+                            <option value="dor_de_cabeca">Dor de Cabeça</option>
+                            <option value="tontura">Tontura</option>
+                            <option value="palpitacoes">Palpitações</option>
+                            <option value="visao_embacada">Visão Embaçada</option>
+                            <option value="fadiga">Fadiga</option>
+                            <option value="fadiga">Febre</option>
+                            <option value="fadiga">Falta de apetite</option>
+                            <option value="fadiga">Falta de ar</option>
+                            <option value="outro">Outro Sintoma Não Especificado</option>
+                        </select>
+
+                        <input type="text" class="form-control mb-3" 
+                               placeholder="Outro sintoma não especificado" disabled>
+
+                        <select id="intensidade" name="intensidade" class="form-control mb-3">
+                            <option value="leve">Leve</option>
+                            <option value="moderada">Moderada</option>
+                            <option value="severa">Severa</option>
+                        </select>
+
+                        <input type="date" class="form-control mb-3" placeholder="Digite a data desejada">
+                        <input type="time" class="form-control mb-3" placeholder="Digite o horário desejado">
+
+                        <button class="btn btn-primary w-100">Adicionar+</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card p-4">
+                        <h3 class="mb-3">Relato de Sintomas</h3>
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Sintoma</th>
+                                    <th>Intensidade</th>
+                                    <th>Data</th>
+                                    <th>Hora</th>
+                                    <th>Excluir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dor de Cabeça</td>
+                                    <td>Moderada</td>
+                                    <td class="data-hora">17/09/2024</td>
+                                    <td class="data-hora">15:15</td>
+                                    <td><button class="btn btn-primary btn-sm">Excluir</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Tontura</td>
+                                    <td>Leve</td>
+                                    <td class="data-hora">27/09/2024</td>
+                                    <td class="data-hora">17:45</td>
+                                    <td><button class="btn btn-primary btn-sm">Excluir</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Cansaço</td>
+                                    <td>Severa</td>
+                                    <td class="data-hora">03/10/2024</td>
+                                    <td class="data-hora">09:00</td>
+                                    <td><button class="btn btn-primary btn-sm">Excluir</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Visão Embaçada</td>
+                                    <td>Moderada</td>
+                                    <td class="data-hora">23/11/2024</td>
+                                    <td class="data-hora">15:30</td>
+                                    <td><button class="btn btn-primary btn-sm">Excluir</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Palpitações</td>
+                                    <td>Severa</td>
+                                    <td class="data-hora">11/11/2024</td>
+                                    <td class="data-hora">08:30</td>
+                                    <td><button class="btn btn-primary btn-sm">Excluir</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Tremores</td>
+                                    <td>Leve</td>
+                                    <td class="data-hora">14/11/2024</td>
+                                    <td class="data-hora">09:00</td>
+                                    <td><button class="btn btn-primary btn-sm">Excluir</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="card informativo">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Importância do Relato de Sintomas</h3>
+                        <p>O registro regular de sintomas é uma prática essencial para monitorar a saúde e identificar padrões que podem ajudar a prevenir ou tratar condições de saúde de forma mais eficaz.</p>
+
+                        <h5>Por que Registrar Sintomas?</h5>
+                        <ul>
+                            <li><strong>Identificação Precoce de Problemas:</strong> Sintomas podem ser sinais iniciais de doenças. Registrar quando eles acontecem pode ajudar na detecção precoce.</li>
+                            <li><strong>Melhor Comunicação com o Médico:</strong> Relatar sintomas de forma precisa e com datas específicas facilita o diagnóstico médico e o acompanhamento adequado.</li>
+                            <li><strong>Acompanhamento de Padrões:</strong> Sintomas recorrentes ou em evolução podem indicar condições crônicas ou alterações que precisam de atenção, como mudanças hormonais, estresse, ou efeitos colaterais de medicamentos.</li>
+                        </ul>
+
+                        <h5>O que Monitorar?</h5>
+                        <ul>
+                            <li><strong>Intensidade:</strong> Descrever a intensidade do sintoma (leve, moderada ou severa) ajuda a priorizar a atenção médica.</li>
+                            <li><strong>Duração:</strong> O tempo de duração dos sintomas e a frequência com que eles ocorrem são informações importantes para uma avaliação mais detalhada.</li>
+                            <li><strong>Contexto:</strong> Anotar se os sintomas ocorrem após certas atividades, refeições ou em momentos específicos do dia pode fornecer pistas importantes sobre a causa.</li>
+                        </ul>
+
+                        <h5>Benefícios do Monitoramento Regular:</h5>
+                        <ul>
+                            <li>Ajuda a manter um histórico detalhado da sua saúde.</li>
+                            <li>Facilita o ajuste de tratamentos e medicamentos.</li>
+                            <li>Permite uma gestão mais proativa de condições crônicas.</li>
+                        </ul>
+
+                        <p>Mantenha o controle dos seus sintomas e compartilhe essas informações com seu médico para um cuidado mais preciso e personalizado. Pequenas mudanças no seu corpo podem fornecer grandes pistas sobre a sua saúde.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer" 
+             hx-get="../../partials/footer.html" 
+             hx-trigger="load" 
+             hx-swap="outerHTML">
+            <!-- Placeholder content while loading -->
+            <p>Loading footer...</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/htmx.org@2.0.3" 
+            integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" 
+            crossorigin="anonymous"></script>
+    <script src="../../js/registro-de-sintomas.js"></script>
+</body>
+</html>
