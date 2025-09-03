@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #3377DD;
+    --light-blue: #F5FAFF;
+    --white: #FFF;
+    --light-grey: #909498;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--light-blue);
+  }
+  
+  body {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .menu-item {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--light-grey);
+    padding: 10px 15px;
+  
+  }
+
+.menu-item:hover, .menu-item.active {
+  background-color: var(--primary-color);
+  border-radius: 0px 50px 50px 0px;
+  color: var(--white);
+}
+  
+  .menu-item:hover a, .menu-item.active a {
+    color: var(--white);
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: var(--light-grey);
+  }
+  
+  .menu-item a:hover {
+    color: var(--white);
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*max-height: 100vh;*/
+  }
+  
+  header {
+    background-color: var(--white);
+    border-left: 15px solid var(--primary-color);
+    padding: 30px 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header img {
+    max-width: 170px;
+  }
+  
+  main {
+    background-color: var(--light-blue);
+    flex-grow: 1;
+    padding: 30px;
+  }
+  
+  .section-wrapper {
+    height: 100%;
+  }
+
+  .box-shaddow-icon{
+    cursor: pointer;
+  }
+  
+  #loading {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+  }
+  
+  #loading img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  #logout {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--light-grey);
+    padding-bottom: 20px;
+    cursor: pointer;
+    margin-top: auto;
+  }
+  
+  #logout .material-symbols-outlined {
+    font-size: 30px;
+  }
+  
+  .bg-custom-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .table tbody tr td img {
+    margin-right: 25px;
+  }
+  
+  .table tbody tr {
+    border-color: transparent;
+  }
+  
+  .table thead tr th {
+    color: #999999;
+    font-size: 12px;
+  }
+  
+  /*Configurações Calculadora*/
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*.container {*/
+  /*  max-width: 600px;*/
+  /*  margin: 0 auto;*/
+  /*  background-color: #fff;*/
+  /*  padding: 20px;*/
+  /*  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+  /*  border-radius: 10px;*/
+  /*}*/
+  
+  h3 {
+    color: #333;
+    margin-bottom: 10px;
+    position: left;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    margin-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px; 
+    font-size: 16px;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+
+  input:focus {
+    outline: none;
+    border: 0.5px solid rgba(13, 110, 253, 1); 
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); 
+  }
+
+  button.salvar {
+    background-color: #F0F3FA;
+    color: #1F87FE;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button.salvar:hover {
+    background-color: #4182F9;
+    color: #ffffff;
+  }
+  
+  .resultado-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .resultado {
+    display: flex;
+    align-items: center;
+  }
+  
+  .resultado input {
+    margin-right: 10px;
+  }
+  
+  .box-shaddow-icon {
+    box-shadow: 5px 7px 15px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 20%;
+    width:40px;
+    height: 40px;
+  }
+
+.no-flex-grow {
+    flex-grow: 0; 
+}
+
+.historico{
+    flex: 1;
+    width: 50%;
+}
+
+.calculadora{
+    flex: 1;
+    width: 100%;
+}
+
+.card-body{
+    width: 100%;
+}

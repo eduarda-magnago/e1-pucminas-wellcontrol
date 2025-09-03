@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff2d;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.login-section {
+    width: 62%;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+form {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 31.25px;
+    color: #242424;
+    font-weight: bold;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAFAFA;
+    border-color: #EEEEEE;
+    border-radius: 20px;
+    padding: 10px;
+    width: 47%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.social-button img {
+    margin-right: 10px;
+}
+
+.google-btn, .facebook-btn {
+    background: none;
+    border: none;
+    font-size: 12.8px;
+    color: #616161;
+}
+
+.input-group input {
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #007bff;
+    outline: none;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.remember-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.remember-me input[type="checkbox"]:checked {
+    background-color: #007bff;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #4182F9;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12.8px;
+    width: 114.75px;
+    height: 42px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4182f9;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.signup {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #498bee;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    color: #757575;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}

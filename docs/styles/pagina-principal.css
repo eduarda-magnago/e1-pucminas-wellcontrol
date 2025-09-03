@@ -1,0 +1,576 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5FAFF;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.titulo-principal{
+    justify-content: center;
+}
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os blocos */
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1230px;
+    background-color: #2f8dda;
+    box-sizing: border-box;
+}
+
+.titulo-logo {
+    display: flex; /* Layout flexível para a logo e o título */
+    align-items: center; /* Centraliza verticalmente logo e título */
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: block; 
+    margin-right: 10px; 
+    align-items: center;
+    margin: 0;
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.titulo-logo h1 {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+    display: flex; /* Garantia de alinhamento interno, se necessário */
+    align-items: center; /* Centraliza internamente o texto do título */
+}
+
+header div:last-child {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os links */
+}
+
+.botao-header-cadastro, .botao-login-header {
+    margin-left: 10px; /* Espaçamento entre os botões */
+    color: #fff;
+    text-decoration: none;
+}
+
+.botao-login-header{   
+    text-decoration: none;
+    /*background-color: #F5FAFF;*/
+    background-color: #F0F3FA;
+    color: #1F87FE;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.botao-header-cadastro, .botao-login {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.botao-header-cadastro {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px; 
+}
+
+.botao-login-header:hover{
+    background-color: #367ac4;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.botao-saiba-mais {
+    background-color: #F0F3FA;
+    color: #1F87FE;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 20px; 
+}
+
+.botao-saiba-mais:hover {
+    background-color: #367ac4;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px; 
+    padding: 30px 20px;
+    text-align: left; 
+    display: flex;
+    flex-direction: column; 
+    align-items: start; 
+}
+
+.texto-e-botao {
+    max-width: 1000px; 
+}
+
+.imagem-principal{
+    margin-top: 20px; 
+    max-width: 100%; 
+    border-radius: 6px;
+}
+
+h2 {    
+    font-size: 40px;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/*Seção de Funcionalidades*/
+.funcionalidades {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.funcionalidades h2 {   
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.cards-funcionalidades {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px;
+}
+
+.card {
+    background-color: transparent; 
+    text-align: left;
+    width: 32%; 
+}
+
+.card img {
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    margin-bottom: 20px;
+    border: none; 
+}
+
+.card h3 {   /*título de cada card*/
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {  /*texto de cada card*/
+    font-size: 16px;
+    color: #666;
+}
+
+/*Seção "O que mais você encontra?"*/
+.secao-mais-info {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start; /* Garante que tudo esteja alinhado ao topo */
+}
+
+.mais-info {
+    flex: 1;
+    text-align: left; /* Alinha todo o texto à esquerda */
+}
+
+.mais-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left; /* Garante que o título principal esteja à esquerda */
+}
+
+.mais-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+    text-align: left; /* Garante alinhamento à esquerda */
+}
+
+.mais-info p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left; /* Alinha os parágrafos à esquerda */
+}
+
+.botoes-info {
+    margin-top: 30px;
+    text-align: left; /* Alinha os botões à esquerda */
+}
+
+.botao-login, .botao-info-cadastro {
+    text-decoration: none;
+    background-color: #F0F3FA;
+    color: #1F87FE;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    margin-right: 10px; /* Espaçamento entre botões */
+}
+
+.botao-info-cadastro {
+    background-color: #e9e9e9;
+    color: #000;
+}
+
+.botao-login:hover {
+    background-color: #367ac4;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.botao-info-cadastro:hover {
+    background-color: #dbd6d6;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.imagem-info {
+    flex: 1;
+    text-align: right; /* Mantém a imagem alinhada à direita */
+    margin-left: 20px; /* Dá espaço entre o texto e a imagem */
+}
+
+.imagem-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+
+/* Seção de Avaliações */
+.avaliacoes {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.avaliacoes h2 {   
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.cards-avaliacoes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; 
+}
+
+.avaliacao-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;  
+    border-radius: 8px; 
+    padding: 15px; 
+    width: 30%; 
+    text-align: left; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.avaliacao-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700; 
+}
+
+.usuario-info {
+    display: flex;   
+    align-items: center; 
+    gap: 10px; 
+}
+
+.usuario-info img {   
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.usuario-detalhes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    line-height: 1.4; 
+    height: 10px; 
+}
+
+.usuario-detalhes h4 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin: 0; 
+}
+
+.usuario-detalhes p {
+    font-size: 14px;
+    color: #666;
+    margin: 0; 
+}
+
+/* Seção de Contato */
+.contato {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; /* Alinha itens ao topo */
+    padding: 40px 20px;
+    gap: 30px; /* Adiciona espaço entre a imagem e o formulário */
+}
+
+.imagem-contato {
+    flex: 1; 
+}
+
+.imagem-contato img {
+    width: 100%; 
+    max-width: 450px; 
+    border-radius: 8px;
+}
+
+.formulario-contato {
+    flex: 1.6; 
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.formulario-contato h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.nome-sobrenome {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os campos nome e sobrenome */
+}
+
+/* Ajuste para alinhar os títulos ao início */
+.nome, .sobrenome, .email, .mensagem {
+    color: #000000;
+    margin-bottom: 8px; /* Espaço entre o título e o campo de entrada */
+    text-align: left; /* Garante o alinhamento à esquerda */
+    font-weight: 500; /* Torna o texto mais legível */
+}
+
+input, textarea {
+    width: 100%; /* Preenche 100% do espaço pai */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #F0F3FA;
+    color: #1F87FE;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Botão alinhado ao tamanho do formulário */
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #367ac4;
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    background-color: #F5FAFF;
+    padding: 40px 20px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between; /* Separa os itens principais */
+    align-items: flex-start; /* Alinha os elementos ao topo */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 610px; /* Espaçamento entre os itens */
+}
+
+.logo-rodape {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; /* Espaçamento entre título e ícones */
+}
+
+.logo-rodape h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.icones-sociais {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+}
+
+.icones-sociais a img {
+    width: 20px;
+    height: 20px;
+}
+
+.texto-rodape {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o texto no lado direito */
+    justify-content: flex-end; /* Posiciona no final do rodapé */
+    text-align: right;
+}
+
+.texto-rodape div {
+    max-width: 400px;
+}
+
+.texto-rodape h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.texto-rodape a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.box-shaddow-icon{
+    cursor: pointer;
+}
+
+/*CSS da página 2: Como funciona a WellControl?*/
+.img-page-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media Queries para iPhones (telas menores) */
+@media (max-width: 600px) {
+    .cards-avaliacoes {
+        flex-direction: column; 
+    }
+
+    .avaliacao-card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-mais-info {
+        flex-direction: column; 
+        text-align: flex-start; 
+        padding: 20px 10px; 
+    }
+
+    .imagem-info {
+        margin-top: 20px; 
+        text-align: center; 
+    }
+
+    .imagem-info img {
+        max-width: 95%; 
+        height: auto;
+    }
+
+    .mais-info h2 {
+        font-size: 26px; 
+    }
+
+    .mais-info p {
+        font-size: 16px; 
+    }
+
+    .botoes-info {
+        display: flex;
+        gap: 10px; 
+        margin-top: 20px; 
+    }
+
+    .botao-info-cadastro {
+        margin-left: 0; 
+    }
+}
+
