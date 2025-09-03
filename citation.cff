@@ -1,0 +1,25 @@
+message: Sistema de monitoramento de saúde
+title: WellControl
+authors:
+  - family-names: Laporte
+    given-names: Andréas
+  - family-names: Longhini
+    given-names: Carolina 
+  - family-names: Azeredo Magnago
+    given-names: Eduarda
+  - family-names: Cardoso
+    given-names: Igor Gabriel
+  - family-names: Ritiele Rodrigues Coelho
+    given-names: Lorrayne
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone
+keywords:
+  - saúde
+  - monitoramento
+  - hipertensão
+  - diabetes
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e1-proj-web-t3-wellcontrol
+version: 1.0.0
+date-released: 2024-12-05
